@@ -1,0 +1,510 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand:wght@100;300;400;500;700;900&display=swap");
+html, body {
+  font-family: "Roboto";
+  width: 100%;
+  margin: 0;
+}
+
+.header {
+  box-shadow: 0 4px 2px -2px lightgray;
+  padding: 0.5rem 0 0.5rem 0;
+  position: relative;
+  z-index: 1;
+}
+.header__title {
+  margin: 0;
+  text-align: center;
+}
+.header__title a {
+  color: black;
+  text-decoration: none;
+  font-family: "Shrikhand";
+}
+.header__previous {
+  position: absolute;
+  left: 1rem;
+  top: 1.35rem;
+  color: #353535;
+}
+
+.footer {
+  background-color: #353535;
+  padding: 1.5rem 1rem 1rem 1.5rem;
+}
+.footer__title {
+  font-family: "Shrikhand";
+  color: white;
+  padding-top: 5rem;
+  font-size: 1.3rem;
+}
+.footer__list {
+  padding: 0;
+  list-style: none;
+}
+.footer__list__element {
+  padding-bottom: 0.5rem;
+}
+.footer__list__element__link {
+  color: white;
+  text-decoration: none;
+}
+
+.map {
+  text-align: center;
+  padding: 1.5rem 0 1rem 0;
+  margin-top: 2rem;
+  color: #403D3C;
+  background-color: #EAEAEA;
+}
+.map__icon {
+  padding-right: 0.5rem;
+}
+
+.explo {
+  text-align: center;
+  padding: 2rem 0 5rem 0;
+  height: 100%;
+  background-color: #F6F6F6;
+}
+.explo__title {
+  font-size: 1.5rem;
+  padding: 1rem 4rem 0.5rem 4rem;
+  margin: 0;
+}
+.explo__desc {
+  padding: 0.5rem 3rem 1rem 3rem;
+  margin-bottom: 2rem;
+  color: #5D5D5D;
+  margin-top: 0;
+}
+.explo__button {
+  padding: 1.25rem 1.75rem;
+  color: white;
+  background: #FF79DA;
+  background: linear-gradient(180deg, #FF79DA 2%, #9356DC 84%);
+  border-radius: 100px;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.2);
+}
+.explo__button:hover {
+  filter: brightness(125%);
+}
+
+.guide {
+  margin: 0.5rem;
+}
+.guide__title {
+  margin: 0.5rem;
+  padding-top: 2rem;
+}
+.guide__steps {
+  list-style: none;
+  padding: 1rem;
+}
+@media (min-width: 50rem) {
+  .guide__steps {
+    display: flex;
+  }
+}
+.guide__steps__step {
+  display: flex;
+  align-items: center;
+  background-color: #F6F6F6;
+  padding: 0.75rem 1rem 0.75rem 0;
+  border-radius: 1.25rem;
+  box-shadow: 0px 10px 20px 2px rgba(163, 163, 163, 0.37);
+  margin-bottom: 1.5rem;
+}
+.guide__steps__step:hover {
+  background-color: #ffdff6;
+}
+@media (min-width: 50rem) {
+  .guide__steps__step {
+    width: 30%;
+    margin-right: 2rem;
+  }
+}
+.guide__steps__step__number {
+  margin-right: 1.25rem;
+  margin-left: -10px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  padding: 0.25rem 0.5rem;
+  color: white;
+}
+.guide__steps__step__icon {
+  margin-right: 1rem;
+  color: #9c9c9c;
+}
+.guide__steps__step__text {
+  padding-right: 6rem;
+}
+
+.restaurants {
+  background-color: #F6F6F6;
+  padding-top: 1rem;
+}
+.restaurants__title {
+  margin: 1rem 1rem 0.5rem 1rem;
+}
+.restaurants__cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  padding-bottom: 2rem;
+}
+@media (min-width: 50rem) {
+  .restaurants__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.restaurants__cards__card {
+  margin: 1rem;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 1.25rem;
+  position: relative;
+  box-shadow: 0px 10px 20px 2px rgba(163, 163, 163, 0.37);
+}
+.restaurants__cards__card__img {
+  width: 100%;
+  height: 13rem;
+  object-fit: cover;
+  border-radius: 1.25rem 1.25rem 0 0;
+}
+.restaurants__cards__card__new {
+  background-color: #99E2D0;
+  padding: 0.5rem 1rem;
+  color: #028867;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1;
+}
+.restaurants__cards__card__dishDescription {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 0 0 1.25rem 1.25rem;
+  padding-bottom: 1rem;
+}
+.restaurants__cards__card__dishDescription__title {
+  padding: 0.5rem 0.5rem 0.25rem 0.5rem;
+  margin: 0;
+}
+.restaurants__cards__card__dishDescription__text {
+  padding: 0.5rem;
+  margin: 0;
+}
+.restaurants__cards__card__dishDescription__iconEmpty {
+  color: #4A4A4A;
+  right: 1rem;
+  background: white;
+  margin: 1.5rem;
+  color: #4A4A4A;
+  position: absolute;
+}
+.restaurants__cards__card__dishDescription__iconEmpty:hover {
+  -webkit-animation: scale 1s ease-out;
+  animation-fill-mode: forwards;
+}
+.restaurants__cards__card__dishDescription__iconFilled {
+  right: 1rem;
+  margin: 1.5rem;
+  position: absolute;
+  background: linear-gradient(180deg, #9356DC 25%, #FF79DA 75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 9999;
+  animation: endLoader 0.01s;
+  animation-delay: 4s;
+  animation-fill-mode: both;
+}
+.loader__circular {
+  animation: rotate 1.5s linear infinite;
+  height: 25%;
+  width: 25%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.loader__circular__path {
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+  stroke-linecap: round;
+}
+
+.backgroundImg {
+  width: 100%;
+  height: 13rem;
+  object-fit: cover;
+}
+@media (min-width: 50rem) {
+  .backgroundImg {
+    height: 25rem;
+  }
+}
+
+.main {
+  position: relative;
+  margin-top: -2rem;
+  border-radius: 1.25rem 1.25rem 0 0;
+}
+
+.menu {
+  margin-top: -2rem;
+  border-radius: 1.25rem 1.25rem 0 0;
+  position: relative;
+  z-index: 1;
+}
+.menu__titlePart {
+  position: relative;
+  border-radius: 1.25rem 1.25rem 0 0;
+  padding-top: 1.5rem;
+  background-color: #F6F6F6;
+  display: flex;
+  align-items: center;
+}
+.menu__titlePart__title {
+  margin: 0 1rem;
+  font-family: "Shrikhand";
+}
+.menu__titlePart__iconEmpty {
+  font-size: 1.2rem;
+  right: 0.5rem;
+  color: #4A4A4A;
+  background-color: #F6F6F6;
+  margin: 1.5rem;
+  color: #4A4A4A;
+  position: absolute;
+}
+.menu__titlePart__iconEmpty:hover {
+  -webkit-animation: scale 1s ease-out;
+  animation-fill-mode: forwards;
+}
+.menu__titlePart__iconFilled {
+  font-size: 1.2rem;
+  right: 0.5rem;
+  margin: 1.5rem;
+  position: absolute;
+  background: linear-gradient(180deg, #9356DC 25%, #FF79DA 75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu__parts {
+  padding: 1rem 0;
+  background-color: #F6F6F6;
+}
+@media (min-width: 50rem) {
+  .menu__parts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.menu__parts__part .delay-1 {
+  animation: rotateX 300ms 60ms ease-in-out forwards;
+  transform-origin: top center;
+}
+.menu__parts__part .delay-2 {
+  animation: rotateX 300ms 120ms ease-in-out forwards;
+  transform-origin: top center;
+}
+.menu__parts__part .delay-3 {
+  animation: rotateX 300ms 180ms ease-in-out forwards;
+  transform-origin: top center;
+}
+.menu__parts__part .delay-4 {
+  animation: rotateX 300ms 240ms ease-in-out forwards;
+  transform-origin: top center;
+}
+.menu__parts__part .delay-5 {
+  animation: rotateX 300ms 300ms ease-in-out forwards;
+  transform-origin: top center;
+}
+.menu__parts__part .delay-6 {
+  animation: rotateX 300ms 360ms ease-in-out forwards;
+  transform-origin: top center;
+}
+.menu__parts__part .delay-7 {
+  animation: rotateX 300ms 420ms ease-in-out forwards;
+  transform-origin: top center;
+}
+.menu__parts__part .delay-8 {
+  animation: rotateX 300ms 480ms ease-in-out forwards;
+  transform-origin: top center;
+}
+.menu__parts__part .delay-9 {
+  animation: rotateX 300ms 540ms ease-in-out forwards;
+  transform-origin: top center;
+}
+.menu__parts__part .delay-10 {
+  animation: rotateX 300ms 600ms ease-in-out forwards;
+  transform-origin: top center;
+}
+.menu__parts__part__title {
+  margin: 1rem;
+  font-weight: normal;
+  font-size: 1rem;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0;
+}
+.menu__parts__part__title::after {
+  content: "";
+  height: 0.25rem;
+  width: 2.5rem;
+  background: #99E2D0;
+  position: absolute;
+  margin: auto;
+  bottom: -5px;
+  left: 0;
+}
+.menu__parts__part__food {
+  display: flex;
+  background-color: white;
+  margin: 1rem;
+  overflow: hidden;
+  align-items: flex-end;
+  box-shadow: 0px 10px 20px 2px rgba(163, 163, 163, 0.37);
+  border-radius: 0.75rem;
+}
+.menu__parts__part__food:hover .menu__parts__part__food__check {
+  margin-right: 0;
+}
+.menu__parts__part__food:hover .menu__parts__part__food__check__iconContainer__icon {
+  transform: rotate(0);
+}
+.menu__parts__part__food__text {
+  padding: 0 0.5rem 0.5rem 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  flex: 1;
+}
+.menu__parts__part__food__text__title {
+  margin: 0 0.5rem 0 0.5rem;
+}
+.menu__parts__part__food__text__desc {
+  margin: 0.5rem;
+  font-size: 0.8rem;
+}
+.menu__parts__part__food__price {
+  margin: 0.5rem;
+}
+.menu__parts__part__food__check {
+  margin-right: -3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  height: 3.5rem;
+  width: 3rem;
+  border-radius: 0 0.75rem 0.75rem 0;
+  transition-duration: 1s;
+}
+.menu__parts__part__food__check__iconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: white;
+  border-radius: 50%;
+}
+.menu__parts__part__food__check__iconContainer__icon {
+  color: #99E2D0;
+  transform: rotate(180deg);
+  transition-duration: 1s;
+}
+.menu__button {
+  position: relative;
+  text-align: center;
+  background-color: #F6F6F6;
+  padding: 1rem 0 5rem 0;
+}
+.menu__button__order {
+  padding: 1rem 3rem;
+  color: white;
+  background: #FF79DA;
+  background: linear-gradient(180deg, #FF79DA 2%, #9356DC 84%);
+  border-radius: 100px;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.2);
+}
+.menu__button__order:hover {
+  filter: brightness(125%);
+}
+
+@keyframes rotateX {
+  0% {
+    transform: scale(0);
+    transform: rotateX(-90deg);
+  }
+  80% {
+    transform: rotateX(-20deg);
+  }
+  100% {
+    transform: scale(1);
+    transform: rotateX(0deg);
+  }
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes endLoader {
+  100% {
+    z-index: -9999;
+    opacity: 0;
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}
+@keyframes color {
+  100%, 0% {
+    stroke: #9356DC;
+  }
+  35% {
+    stroke: #FF79DA;
+  }
+  70% {
+    stroke: #99E2D0;
+  }
+}
+@-webkit-keyframes scale {
+  5% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

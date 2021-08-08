@@ -1,0 +1,185 @@
+.backgroundImg {
+    width: 100%;
+    height: 13rem;
+    object-fit: cover;
+
+    @media (min-width:50rem) {
+        height: 25rem;
+      }
+}
+
+.main {
+    position: relative;
+    margin-top: -2rem;
+    border-radius: 1.25rem 1.25rem 0 0;
+}
+
+.menu {
+
+    margin-top: -2rem;
+    border-radius: 1.25rem 1.25rem 0 0;
+    position: relative;
+    z-index: 1;
+
+    
+    &__titlePart {
+        
+        position: relative;
+        border-radius: 1.25rem 1.25rem 0 0;
+        padding-top: 1.5rem;
+        background-color: #F6F6F6;
+        display: flex;
+        align-items: center;
+        
+        &__title {
+            margin: 0 1rem;
+            font-family: "Shrikhand";
+        }
+
+        &__iconEmpty {
+            font-size: 1.2rem;
+            right: 0.5rem;
+            color: #4A4A4A;
+            background-color: #F6F6F6;
+            @include emptylike;
+            
+        }
+    
+        &__iconFilled {
+            font-size: 1.2rem;
+            right: 0.5rem;
+            @include filledlike;
+        }
+    }
+
+    &__parts {
+
+        padding: 1rem 0;
+        background-color: #F6F6F6;
+
+        @media (min-width:50rem) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        &__part {
+
+            @for $num from 1 to 11 {
+
+                .delay-#{$num} {
+    
+                   animation: rotateX 300ms ($num * 60ms) ease-in-out forwards;
+                   transform-origin: top center;
+                }
+            }
+
+            &__title {
+
+                margin: 1rem;
+                font-weight: normal;
+                font-size: 1rem;
+                display:inline-block;
+                position:relative;
+                padding-bottom: 0;
+            }
+
+            &__title::after {
+                content:'';
+                height: 0.25rem;
+                width: 2.5rem;
+                background: $color-tertiary;
+                position:absolute;
+                margin:auto;
+                bottom:-5px;
+                left:0; 
+            }
+
+            &__food {
+                display: flex;
+                background-color: white;
+                margin: 1rem;
+                overflow: hidden;
+                align-items: flex-end;
+                box-shadow: 0px 10px 20px 2px rgba(163, 163, 163, 0.37);
+                border-radius: 0.75rem;
+
+                &:hover &__check {
+                    margin-right: 0;
+
+                    &__iconContainer {
+                        &__icon {
+                            transform: rotate(0);
+                        }
+                    }
+                }
+
+                &__text {
+                    padding: 0 0.5rem 0.5rem 0;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    flex: 1;
+
+                    &__title {
+
+                        margin: 0 0.5rem 0 0.5rem;
+                    }
+    
+                    &__desc {
+    
+                        margin: 0.5rem;
+                        font-size: 0.8rem;
+                    }
+                }
+
+                &__price {
+                    margin: 0.5rem;
+                }
+
+                &__check {
+
+                    margin-right: -3rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: $color-tertiary;
+                    height: 3.5rem;
+                    width: 3rem;
+                    border-radius: 0 0.75rem 0.75rem 0;
+                    transition-duration: 1s;
+
+                    &__iconContainer {
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 1.5rem;
+                        width: 1.5rem;
+                        background-color: white;
+                        border-radius: 50%;
+
+                        &__icon {
+                            
+                            color: $color-tertiary;
+                            transform: rotate(180deg);
+                            transition-duration: 1s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__button {
+
+        position: relative;
+        text-align: center;
+        background-color: #F6F6F6;
+        padding: 1rem 0 5rem 0;
+
+        &__order {
+            padding: 1rem 3rem;
+            @include commonbutton;
+        }
+    }
+}
